@@ -194,6 +194,16 @@ body {
     font-size: 12px;
     border-radius: 4px;
 }
+.category-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+    transform: scale(0.9);
+}
 
 .recipe-card {
     display: block;
@@ -465,3 +475,11 @@ body {
     color: #f15a16;
     margin-top: 4px;
 }
+
+.recipe-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 23px rgba(0, 0, 0, 0.12);
+}
+
+
+
