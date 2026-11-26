@@ -62,7 +62,7 @@ async function loadCategories() {
             menu.appendChild(item);
         }
 
-        if (page === "home") {
+        if (page === "home" || page === "meal") {
             showCategories(categories);
         }
 
@@ -77,7 +77,7 @@ async function loadCategories() {
         }
     } catch (error) {
         console.error(error);
-        if (page === "home") {
+        if (page === "home" || page === "meal") {
             document.getElementById("categoryStatus").textContent = "Could not load categories. Please refresh the page.";
         }
     }
@@ -307,6 +307,11 @@ function showView() {
     }
     results.hidden = (page === "meal");
     details.hidden = (page !== "meal");
+
+    const categoriesSection = document.getElementById("categoriesSection");
+    if (categoriesSection) {
+        categoriesSection.hidden = (page !== "meal");
+    }
 }
 
 showView();

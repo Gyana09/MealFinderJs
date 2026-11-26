@@ -71,7 +71,7 @@
             </div>
 
             <p class="page-status" id="resultsStatus" role="status" aria-live="polite">
-                Loading recipes…
+                Loading recipes...
             </p>
             <div class="meal-grid" id="recipeGrid"></div>
             <!-- One recipe card. JavaScript copies it for every API result. -->
@@ -104,7 +104,7 @@
             </div>
 
             <p class="page-status" id="mealStatus" role="status" aria-live="polite">
-                Loading meal details…
+                Loading meal details...
             </p>
 
             <div id="mealContent" hidden>
@@ -156,6 +156,25 @@
 
             <template id="instructionTemplate">
                 <p><i class="fa-regular fa-square-check"></i><span class="step-text"></span></p>
+            </template>
+        </section>
+
+        <!-- Categories: shown only under the recipe details -->
+        <section class="categories-section" id="categoriesSection" hidden aria-labelledby="categoriesTitle">
+            <h3 class="categories-title" id="categoriesTitle">CATEGORIES</h3>
+            <div class="title-underline"></div>
+
+            <p class="page-status" id="categoryStatus" role="status" aria-live="polite">
+                Loading meal categories...
+            </p>
+            <div class="meal-grid" id="categoryGrid"></div>
+            <template id="categoryCardTemplate">
+                <div class="meal-column">
+                    <a class="category-card" href="#">
+                        <span class="category-badge"></span>
+                        <img src="" alt="" loading="lazy">
+                    </a>
+                </div>
             </template>
         </section>
     </main>
